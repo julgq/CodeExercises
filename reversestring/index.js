@@ -33,7 +33,7 @@ function reverse(str) {
 
 
 
-/*
+
 // - Solution with for loop -
 function reverse(str) {
    let reversed = '';
@@ -41,11 +41,12 @@ function reverse(str) {
    for(let character of str){
        // reversed get value reverse
        reversed = character + reversed;
+       debugger;
    }
-  
+
    return reversed;
 }
-*/
+
 
 /*
 // - Solution with array helper: Reduce Helper-
@@ -59,11 +60,13 @@ function reverse(str) {
 }
 */
 
+/*
 // - Solution with array helper: Reduce Helper Refactoring-
 function reverse(str) {
     return str.split('').reduce((rev, char) => char + rev, '');
 }
+*/
 
-
+reverse('julio');
 
 module.exports = reverse;

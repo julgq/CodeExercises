@@ -7,6 +7,15 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+/*
+ - Solution JCGQ with Reduce -
+function palindrome(str) {
+    let reverse = '';
+    let result = false;
+    reverse = str.split('').reduce((rev, char) => char + rev, '');
+    reverse == str ? result = true :  result =false
+    return result;
+}
+*/
 
 module.exports = palindrome;

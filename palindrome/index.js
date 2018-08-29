@@ -10,7 +10,7 @@
 /*
  - Solution JCGQ with Reduce -
 function palindrome(str) {
-    let reverse = '';
+    const reverse = '';
     let result = false;
     reverse = str.split('').reduce((rev, char) => char + rev, '');
     reverse == str ? result = true :  result =false
@@ -18,4 +18,45 @@ function palindrome(str) {
 }
 */
 
+/*
+ //- Solution JCGQ with Reduce 2.0 -
+function palindrome(str) {
+    let reverse = '';
+    reverse = str.split('').reduce((rev, char) => char + rev, '');
+    return str === reverse;
+}
+*/
+
+/*
+//- Solution using reverse function -
+function palindrome(str) {
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+*/
+
+/*
+//- Solution using reverse function 2.0 -
+function palindrome(str) {
+    const reversed = str
+        .split('')
+        .reverse()
+        .join('');
+
+    return str === reversed;
+}
+*/
+
+/*
+//- Solution using Array Helper Reduce Helper Every -
+function palindrome(str) {
+    console.log('-----');
+    return str.split('').every((char, index) => {
+        console.log(str.length - index - 1);
+        console.log(char === str[str.length - index - 1]);
+        return char === str[str.length - index - 1];
+    });
+    
+}
+*/
 module.exports = palindrome;

@@ -46,6 +46,7 @@ function reverseInt(n) {
 }
 */
 
+/*
 // - Solution JCGQ, using for loop-
 function reverseInt(n) {
     let reversed = '';
@@ -60,5 +61,21 @@ function reverseInt(n) {
     }
     return parseInt(reversed);
 }
+*/
+
+
+// - Solution JCGQ, using reduce and and map function
+function reverseInt(n) {
+    let reversed = n
+        .toString()
+        .split('')
+        .reduce((rev, char) => {
+            return char + rev;
+        });
+
+    // La función Math.sign() retorna el signo de un número, indicando si el número es positivo, negativo o cero.
+    return parseInt(reversed) * Math.sign(n);
+}
+
 
 module.exports = reverseInt;

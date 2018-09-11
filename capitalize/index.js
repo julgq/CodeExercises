@@ -7,6 +7,16 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+// solution using slice() function
+function capitalize(str) {
+    const words = [];
+
+    for (let word of str.split(' ')) {
+        // agregar la palabra con la primer letra mayuscula.
+        words.push(word[0].toUpperCase() + word.slice(1));
+    }
+
+    return words.join(' ');
+}
 
 module.exports = capitalize;

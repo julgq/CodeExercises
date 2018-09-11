@@ -9,6 +9,21 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 
+// Solution using function sort()
+function anagrams(stringA, stringB) {
+    return cleanString(stringA) === cleanString(stringB);
+}
+
+function cleanString(str) {
+    return str.replace(/[^\w]/g, '')
+    .toLowerCase()
+    .split('')
+    .sort('')
+    .join('');
+}
+
+
+/*
 function anagrams(stringA, stringB) {
     const aCharMap = buildCharMap(stringA);
     const bCharMap = buildCharMap(stringB);
@@ -35,6 +50,8 @@ function buildCharMap(str) {
 
     return charMap;
 }
+*/
+
 /*
 // - Solucion Julio Gutierrez
 function anagrams(stringA, stringB) {
